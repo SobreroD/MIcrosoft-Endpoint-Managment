@@ -9,7 +9,7 @@
 
 History:
 	10/23/2020 Script Created by Nick Bowen @Bitflipper.tech
-    And Donovan M Sobrero @networkmechanics.net
+    And Donovan M Sobrero Donovan@networkmechanics.net
 
 File Location: https://github.com/SobreroD/MIcrosoft-Endpoint-Managment/upload/main/Tools/OMA-URI_FromAMDX
        
