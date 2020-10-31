@@ -1,4 +1,4 @@
-# Intune Export OMA-URI info frm ADMX files
+# Intune Export OMA-URI info from ADMX files
 #     By Nick Bowen and Donovan Sobrero
 
 To run example -- just point to the .admx file
