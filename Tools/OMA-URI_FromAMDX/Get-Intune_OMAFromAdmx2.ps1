@@ -1,18 +1,38 @@
 <#Requires -Version 7.0
 <#   
-
-
- Prepare .admx files for use in Microsoft Endpoint Management Policies
- Use: Get-Intune_OMAfromAdmx.ps1
-
- Change Log
+    .SYNOPSIS
+    Parses .admx files for use in Microsoft Endpoint Management Policies
+    .DESCRIPTION
+    Parses .admx files and will output either a PSCustomObject[] or an Excel Spreadsheet.
+    The corresponding .adml file is used to bring in the Help for policies defined.
+    For policy values that have an enumeration, then samples of the possible values are generated.
+    If a policy does not have an enumeration of values, then a simple <enabled/> is provided. Depending on your use, you might also need <disabled/>    
+    
+    OMA-URI Format
+    ./{user or device}/Vendor/MSFT/Policy/Config/{AreaName}/{PolicyName}
+    Note: Can probably run with an earlier version than Powershell Core 7.x. Script was developed on a Mac and therefore it can be run cross-platform if needed
+    .PARAMETER AdmxPath
+    Path to .admx file. The required .adml file can be either in the same folder as the .admx file or it has been hard 
+    .PARAMETER Excel
+    Specifies if Excel spreadsheet should be generated.  If parameter is provided, the .xlsx file will be generated in the same folder as the .admx file
+    Note: Requires ImportExcel Module (https://www.powershellgallery.com/packages/ImportExcel)
+    .PARAMETER DefaultLang
+    Language folder containing the .adml file
+    .PARAMETER Dev
+    Display Debug Output
+    .INPUTS
+    None. You cannot pipe objects to Add-Extension.
+    .OUTPUTS
+    If the -Excel parameter is not provided, then the output is a Powershell PSCustomObject[] that can used in a pipeline 
 
 History:
 	10/23/2020 Script Created by Nick Bowen @Bitflipper.tech
-    And Donovan M Sobrero Donovan@networkmechanics.net
+            And Donovan M Sobrero Donovan@networkmechanics.net
 
-File Location: https://github.com/SobreroD/MIcrosoft-Endpoint-Managment/upload/main/Tools/OMA-URI_FromAMDX
-       
+File Location: 
+https://github.com/SobreroD/MIcrosoft-Endpoint-Managment/upload/main/Tools/OMA-URI_FromAMDX
+https://github.com/bitfliptech/azure/blob/main/Get-Intune_OMAFromAdmx.ps1
+
  .SYNOPSIS
     Prompts the user with GUI Windows Explorer to find ADMX File.
 
