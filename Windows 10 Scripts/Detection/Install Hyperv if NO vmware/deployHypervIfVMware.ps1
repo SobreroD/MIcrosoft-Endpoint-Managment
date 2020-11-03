@@ -1,6 +1,20 @@
-<#
-By Donovan Sobrero
-Date: 10/30/202
+
+<#PSScriptInfo
+.VERSION 1.0
+.GUID
+.AUTHOR Donovan M Sobrero
+.COMPANYNAME Networkmechanics.net
+.COPYRIGHT
+.TAGS
+.LICENSEURI
+.PROJECTURI
+.ICONURI
+.EXTERNALMODULEDEPENDENCIES 
+.REQUIREDSCRIPTS
+.EXTERNALSCRIPTDEPENDENCIES
+.RELEASENOTES
+Version 1.0: Initial version.
+.PRIVATEDATA
 
 Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* |  Select-Object DisplayName, DisplayVersion, Publisher, InstallDate |
 Format-Table –AutoSize
